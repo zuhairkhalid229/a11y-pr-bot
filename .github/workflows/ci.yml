@@ -46,7 +46,7 @@ jobs:
       # pulls every browser and roughly triples the job time.
       - name: Cache Playwright browsers
         id: playwright-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('worker/requirements.txt') }}
