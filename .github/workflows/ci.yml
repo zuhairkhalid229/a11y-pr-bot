@@ -119,7 +119,7 @@ jobs:
 
       # Both images are built from the repo root: the worker needs app/ too.
       - name: Build api image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           file: Dockerfile
@@ -130,7 +130,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Build worker image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           file: worker/Dockerfile
